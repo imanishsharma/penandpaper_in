@@ -1,0 +1,79 @@
+package com.penandpaper.model;
+
+import java.util.Date;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+import org.h2.store.Data;
+@Entity
+public class Product {
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	private int pId;
+	@Column
+	private String pName;
+	@Column
+	private String pDescription;
+	@Column
+	private int pQuantity;
+	@Column
+	private double pPrice;
+	@Column
+	private Date pMfg;
+public Product()
+{
+	
+}
+	
+	public Product(int pId, String pName, String pDescription, int pQuantity, double pPrice, Date pMfg) {
+		super();
+		this.pId = pId;
+		this.pName = pName;
+		this.pDescription = pDescription;
+		this.pQuantity = pQuantity;
+		this.pPrice = pPrice;
+		this.pMfg = pMfg;
+	}
+	public int getpId() {
+		return pId;
+	}
+	public void setpId(int pId) {
+		this.pId = pId;
+	}
+	public String getpName() {
+		return pName;
+	}
+	public void setpName(String pName) {
+		this.pName = pName;
+	}
+	public String getpDescription() {
+		return pDescription;
+	}
+	public void setpDescription(String pDesciption) {
+		this.pDescription = pDesciption;
+	}
+	public int getpQuantity() {
+		return pQuantity;
+	}
+	public void setpQuantity(int pQuantity) {
+		this.pQuantity = pQuantity;
+	}
+	public double getpPrice() {
+		return pPrice;
+	}
+	public void setpPrice(double pPrice) {
+		this.pPrice = pPrice;
+	}
+	public Date getpMfg() {
+		return pMfg;
+	}
+	public void setpMfg(Date pMfg) {
+		this.pMfg = pMfg;
+	}
+	
+
+
+}

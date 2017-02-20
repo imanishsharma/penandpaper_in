@@ -1,0 +1,80 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+     <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+    <%@ page isELIgnored="false" %>
+    
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Home -penandpaper.in</title>
+  <link rel="stylesheet" href="Resources/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="Resources/css/header.css">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="Resources/bootstrap/js/bootstrap.min.js"></script>
+  <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+         rel = "stylesheet">
+      <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+        <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>
+
+    <link href="https://cdn.datatables.net/1.10.10/css/jquery.dataTables.min.css" rel="stylesheet">
+      
+  
+ <div id="header" class="jumbotron">
+  <div class="container-fluid">
+  <div class="row">
+  <div class ="col-sm-2">
+  <a   class="img-responsive2" class="navbar-brand" href="home"><img id ="brand" src="Resources/images/logo.png"><img/></a>
+  </div>
+  <div class="col-sm-10">
+  </div>
+  </div>
+  </div>	
+  </div>
+ 
+ 
+ <!-- Header and navbar -->
+
+ <nav style="background-color:#26254F" class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+    </div>
+    
+    <div class="collapse navbar-collapse" id="myNavbar">
+    <ul id ="navbar" class="nav navbar-nav">
+    <li class="active"><a href="home"><span class="glyphicon glyphicon-home"></span>  Home</a></li>
+     <c:url var="url" value="/admin/product/productform"></c:url>
+    
+       <li><a href="${url }"><span class="glyphicon glyphicon-plus-sign"></span>    Add New Product</a></li>
+         <c:url var="allproducts" value="/all/product/getAllProducts"></c:url>
+        <li><a href="${allproducts}"><span class="glyphicon glyphicon-folder-open"></span>    Products</a></li>
+         <li class="dropdown">
+			<a href="" class="dropdown-toggle" data-toggle="dropdown">
+                     Select by Category<b class="caret"></b></a>
+			<ul class="dropdown-menu">
+			<c:url var="url1" value="/all/product/productsByCategory?searchCondition=New Arrivals"></c:url>
+			<li><a href="${url1}">New Arrivals</a></li>
+			<c:url var="url_2" value="/all/product/productsByCategory?searchCondition=Discount"></c:url>
+			<li><a href="${url_2}">Discount</a></li>
+			
+			<c:url var="url_3" value="/all/product/productsByCategory?searchCondition=Sale"></c:url>
+			<li><a href="${url_3}">Sale</a></li>
+			</ul>
+			</li>
+</ul>
+        
+          </ul>
+    </div>
+ </div>
+</nav>
+
+
+ 

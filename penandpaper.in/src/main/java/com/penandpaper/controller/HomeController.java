@@ -1,0 +1,37 @@
+package com.penandpaper.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class HomeController {
+	public HomeController(){
+		System.out.println("Creating instance for home controller");
+		
+	}
+	@RequestMapping("/home")
+	public String home() 
+	{
+	return "home";
+	}
+	@RequestMapping("/aboutus")
+	public String aboutUs() 
+	{
+	return "aboutus";
+	}
+	@RequestMapping("/contactus")
+	public String contactUs() 
+	{
+	return "contactus";
+	}
+	@RequestMapping("/register")
+	public String register() 
+	{
+	return "register";
+	}
+	@RequestMapping("/login")
+	public String logIn() 
+	{
+	return "login";
+	}
+}

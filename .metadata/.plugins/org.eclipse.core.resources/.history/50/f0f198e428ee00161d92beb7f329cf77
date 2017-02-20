@@ -1,0 +1,5 @@
+package com.penandpaper.service;
+
+public interface CategoryService {
+
+}

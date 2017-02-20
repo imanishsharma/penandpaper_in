@@ -1,0 +1,182 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Home -penandpaper.in</title>
+  <link rel="stylesheet" href="Resources/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="Resources/css/header.css">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="Resources/bootstrap/js/bootstrap.min.js"></script>
+   <script>
+   $(document).ready(function(){
+   $('.dropdown-submenu a.test').on("click", function(e){
+   $(this).next('ul').toggle();
+   e.stopPropagation();
+   e.preventDefault();
+    });
+   });
+  </script>
+ </head>
+ 
+  <div id="header" class="jumbotron">
+  <div class="container-fluid">
+  <div class="row">
+  <div class ="col-sm-2">
+  <a   class="img-responsive2" class="navbar-brand" href="#"><img id ="brand" src="Resources/images/logo.png"><img/></a>
+  </div>
+  <div class="col-sm-10">
+  <a   class="img-responsive"  class="navbar-brand" href="#"><img id="banner" src="Resources/images/banner.jpg"><img/></a>
+  </div>
+  </div>
+  </div>	
+  </div>
+ 
+ 
+ <!-- Header and navbar -->
+
+ <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+    </div>
+    
+    <div class="collapse navbar-collapse" id="myNavbar">
+    <ul id ="navbar" class="nav navbar-nav">
+    <li class="active"><a href="index.jsp">Home <span class="glyphicon glyphicon-home"></span></a></li>
+    <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Categories <span class="caret"></span></a>
+    <ul class="dropdown-menu">
+    <li class="dropdown-submenu">
+          <a class="test" tabindex="-1" href="#">Archies <span class="caret"></span></a>
+          <ul  class="dropdown-menu">
+          <li><a tabindex="-1" href="#">Albums</a></li>
+          <li><a tabindex="-1" href="#">AutogGraph Book</a></li>
+          <li><a tabindex="-1" href="#">Diary</a></li>
+          <li><a tabindex="-1" href="#">Invitation Card</a></li>
+          <li><a tabindex="-1" href="#">Notebooks</a></li>
+          <li><a tabindex="-1" href="#">Record Book</a></li>
+          <li><a tabindex="-1" href="#">Scrap Book</a></li>
+        </ul>
+        <a class="test" tabindex="-1" href="#">Games & Toys <span class="caret"></span></a>
+        <ul  class="dropdown-menu">
+          <li><a tabindex="-1" href="#">Art & craft</a></li>
+          <li><a tabindex="-1" href="#">Board Games</a></li>
+          <li><a tabindex="-1" href="#">General</a></li>
+          <li><a tabindex="-1" href="#">Learning</a></li>
+          <li><a tabindex="-1" href="#">Magic Games</a></li>
+          <li><a tabindex="-1" href="#">Preschool</a></li>
+          <li><a tabindex="-1" href="#">Purses & cases</a></li>
+          <li><a tabindex="-1" href="#">Puzzles</a></li>
+          <li><a tabindex="-1" href="#">Writing Boards</a></li>
+        </ul>
+           <a class="test" tabindex="-1" href="#">Home Decor <span class="caret"></span></a>
+           <ul  class="dropdown-menu">
+           <li><a tabindex="-1" href="#">Decor & Furnishings</a></li>
+           <li><a tabindex="-1" href="#">Home Furniture</a></li>
+         </ul>
+           <a class="test" tabindex="-1" href="#">House Keeping <span class="caret"></span></a>
+          <ul  class="dropdown-menu">
+          <li><a tabindex="-1" href="#">Cleaning Chemicals</a></li>
+          <li><a tabindex="-1" href="#">Cleaning Cloths</a></li>
+          <li><a tabindex="-1" href="#">Dustbins and Bags</a></li>
+          <li><a tabindex="-1" href="#">Package Materials</a></li>
+          <li><a tabindex="-1" href="#">Tissues and Napkins</a></li>
+         </ul>
+          <a class="test" tabindex="-1" href="#">Office Stationery <span class="caret"></span></a>
+          <ul  class="dropdown-menu">
+          <li><a tabindex="-1" href="#">Battery & Chargers</a></li>
+          <li><a tabindex="-1" href="#">Binder Clips & Pins</a></li>
+          <li><a tabindex="-1" href="#">Board & Markers</a></li>
+          <li><a tabindex="-1" href="#">Calculators</a></li>
+          <li><a tabindex="-1" href="#">Computer & Peripherals</a></li>
+          <li><a tabindex="-1" href="#">Correction Fluids</a></li>
+          <li><a tabindex="-1" href="#">Diary & Planners</a></li>
+          <li><a tabindex="-1" href="#">File & Folders</a></li>
+          <li><a tabindex="-1" href="#">Glues & Adhesives</a></li>
+          <li><a tabindex="-1" href="#">Office Machines</a></li>
+          <li><a tabindex="-1" href="#">Pads & Notebooks</a></li>
+          <li><a tabindex="-1" href="#">Punching Machines</a></li>
+          <li><a tabindex="-1" href="#">Scales & Rulers</a></li>
+          <li><a tabindex="-1" href="#">Scissors & Cutters</a></li>
+          <li><a tabindex="-1" href="#">Stamp Pads & Inks</a></li>
+          <li><a tabindex="-1" href="#">Staplers & Pins</a></li>
+          <li><a tabindex="-1" href="#">Sticky Notes & Flags</a></li>
+          <li><a tabindex="-1" href="#">Tapes & Dispensers</a></li>
+         </ul>
+        <a class="test" tabindex="-1" href="#">Paper Products<span class="caret"></span></a>
+        <ul  class="dropdown-menu">
+          <li><a tabindex="-1" href="#">Art & Craft Paper</a></li>
+          <li><a tabindex="-1" href="#">Computer labels</a></li>
+          <li><a tabindex="-1" href="#">Copier Paper</a></li>
+          <li><a tabindex="-1" href="#">Copy & Register</a></li>
+          <li><a tabindex="-1" href="#">Flip Charts</a></li>
+          <li><a tabindex="-1" href="#">Paper Envelops</a></li>
+          <li><a tabindex="-1" href="#">Rolles & Plotters</a></li>
+          <li><a tabindex="-1" href="#">Speciality Papers</a></li>
+          <li><a tabindex="-1" href="#">Transparent Sheets</a></li>
+          <li><a tabindex="-1" href="#">White & Color Design Sheets</a></li>
+          <li><a tabindex="-1" href="#">Pads & Notebooks</a></li>
+         </ul>
+           <a class="test" tabindex="-1" href="#">Party Essentials<span class="caret"></span></a>
+        <ul  class="dropdown-menu">
+          <li><a tabindex="-1" href="#">Balloons</a></li>
+          <li><a tabindex="-1" href="#">Invitation Cards</a></li>
+          <li><a tabindex="-1" href="#">Gift Baskets</a></li>
+          <li><a tabindex="-1" href="#">Return Gifts</a></li>
+       </ul>
+        <a class="test" tabindex="-1" href="#">School Stationery <span class="caret"></span></a>
+        <ul  class="dropdown-menu">
+          <li><a tabindex="-1" href="#">Art & Craft</a></li>
+          <li><a tabindex="-1" href="#">Books</a></li>
+          <li><a tabindex="-1" href="#">Bottles & Sippers</a></li>
+          <li><a tabindex="-1" href="#">Colors & Brushes</a></li>
+          <li><a tabindex="-1" href="#">Engg Instruments</a></li>
+          <li><a tabindex="-1" href="#">Eraser & Sharpner</a></li>
+          <li><a tabindex="-1" href="#">Exam Boards & Pads</a></li>
+          <li><a tabindex="-1" href="#">Gift Sets</a></li>
+          <li><a tabindex="-1" href="#">Lunch Boxes</a></li>
+          <li><a tabindex="-1" href="#">Pencil Box</a></li>
+          <li><a tabindex="-1" href="#">Student Notebook</a></li>
+         </ul>
+          <a class="test" tabindex="-1" href="#">Writing Instruments <span class="caret"></span></a>
+        <ul  class="dropdown-menu">
+          <li><a tabindex="-1" href="#">Ball Pens</a></li>
+          <li><a tabindex="-1" href="#">Chalks</a></li>
+          <li><a tabindex="-1" href="#">Fountain Pens</a></li>
+          <li><a tabindex="-1" href="#">Gel Pens</a></li>
+          <li><a tabindex="-1" href="#">Glitter Pens</a></li>
+          <li><a tabindex="-1" href="#">Highligters</a></li>
+          <li><a tabindex="-1" href="#">Markers</a></li>
+          <li><a tabindex="-1" href="#">Mech Pencils</a></li>
+          <li><a tabindex="-1" href="#">Parker Pens</a></li>
+          <li><a tabindex="-1" href="#">Pencils</a></li>
+          <li><a tabindex="-1" href="#">Pilot Pens</a></li>
+          <li><a tabindex="-1" href="#">Reffils & Inks</a></li>
+          <li><a tabindex="-1" href="#">Roller Pens</a></li>
+          <li><a tabindex="-1" href="#">Rotring Pens</a></li>
+          <li><a tabindex="-1" href="#">Signature Pens</a></li>
+       </ul>
+     </ul>
+   </li>
+        <li><a href="aboutus.jsp">About Us</a></li>
+        <li><a href="contactus.jsp">Contact Us</a></li>
+   </ul>
+     
+        <ul class="nav navbar-nav navbar-right">
+        <li><a href="register.jsp"><span class="glyphicon glyphicon-user"></span>    Register</a></li>
+        <li><a href="login.jsp"><span class="glyphicon glyphicon-log-in"></span>    Login</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span>    Shopping Cart:0</a></li>
+       </ul>
+    </div>
+ </div>
+</nav>
+
+
+ 

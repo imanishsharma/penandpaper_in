@@ -1,0 +1,13 @@
+package com.penandpaper.service;
+
+@Service
+public class CategoryServiceImpl implements CategoryService{
+	@Autowired
+private CategoryDao categoryDao;
+
+	public List<Category> getCategories() {
+		return categoryDao.getCategories();
+	}
+	
+
+}

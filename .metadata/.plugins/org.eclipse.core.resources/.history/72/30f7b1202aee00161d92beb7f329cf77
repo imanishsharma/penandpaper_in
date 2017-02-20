@@ -1,0 +1,7 @@
+package com.penandpaper.dao;
+
+public interface CategoryDao {
+	List<Category> getCategories();
+
+
+}
