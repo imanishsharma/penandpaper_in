@@ -22,16 +22,16 @@ $('input[name=pMfg]').datepicker({
 });
 </script>
 </head>
-<body>
-<div class="container-wrapper">
+<body style=" background-color:#EEEEEE;">
+<div style="margin-top:10px;margin-bottom:30px;" class="container-wrapper">
 <div class="container">
 <c:url value="/admin/product/addProduct" var="url"></c:url>
-<form:form action="${url}"  commandName="product" enctype="multipart/form-data" >
+<form:form class="form-horizontal" action="${url}"  commandName="product" enctype="multipart/form-data" >
+<fieldset>
 <div class="form-group">
 <label for="pId"></label>
 <form:hidden  path=""/>
 </div>
-
 <div class="form-group">
 <label for="pName">Product Name</label>
 <form:input path="pName" class="form-control"/>
@@ -79,10 +79,13 @@ $('input[name=pMfg]').datepicker({
 <form:input path="image" type="file"/>
 </div>
 <input type="submit" value="Add Product" class="btn btn-default">
+</fieldset>
 </form:form>
 </div>
 
 
 </div>
 </body>
+<%@ include file="footer.jsp" %>
+
 </html>

@@ -1,0 +1,16 @@
+package com.penandpaper.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.penandpaper.model.Customer;
+
+@Controller
+public class CustomerController {
+@RequestMapping("/all/")
+public String getRegistrationForm(Model model){
+	model.addAttribute("customer",new Customer());
+	return "register";
+}
+}

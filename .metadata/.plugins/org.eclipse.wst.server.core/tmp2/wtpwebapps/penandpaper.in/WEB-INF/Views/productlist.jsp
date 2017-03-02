@@ -18,12 +18,12 @@ $(document).ready(function(){
 });
 </script>
 </head>
-<body>
-	<div class="container">
+<body style="background-color:#EEEEEE;">
+	<div style="margin-top:10px;margin-bottom:10px;color:blue;"class="container">
 
-		<table class="table table-striped">
+		<table  class="table table-bordered table-hover table-striped">
 			<thead>
-				<tr>
+				<tr style="color:#26254F;">
 					<th>Image</th>
 					<th>Product Name</th>
 					<th>Description</th>
@@ -36,7 +36,7 @@ $(document).ready(function(){
 				<tr>
 				<td>
 				<c:url var="src" value="Resources/images/${p.pId }.png"></c:url>
-				<img style="height:200px;width:200px;" src="${src } "/>
+				<img style="height:100px;width:100px;" src="${src } "/>
 				</td>
 					<td>${p.pName }</td>
 					<td>${p.pDescription }</td>
@@ -55,5 +55,7 @@ $(document).ready(function(){
 		</table>
 
 	</div>
+	<%@ include file="footer.jsp"%>
+	
 </body>
 </html>

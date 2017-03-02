@@ -1,0 +1,5 @@
+package com.penandpaper.model;
+
+public class BillingAddress {
+
+}

@@ -1,0 +1,144 @@
+<title>Register-penandpaper.in</title>
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@ include file="header.jsp" %>
+ 	<link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+<link href="Resources/css/register.css">
+		
+	</head>
+	<body style="background-color:#EEEEEE;">
+		<div style="margin-top:20px;" class="container">
+  <div  class="col-lg-12 well">	<div class="panel-heading">
+	               <div class="panel-title text-center">
+	               		<img width="40%" class="img-responsive" src ="Resources/images/register_here.png"></img>
+	               	</div>
+	            </div> 
+				
+	<div class="row">
+				<c:url var="url" value="/all/registerCustomer"></c:url>
+                <form:form action="${url }" commandName="customer">
+				
+					<div class="col-sm-12">
+						<div class="row">
+							<div class="col-sm-6 form-group">
+								
+                                <form:label path="firstname">First Name</form:label>
+                                <div class="input-group">
+							    <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+								<form:input path="firstname" placeholder="Enter First Name Here.." class="form-control"></form:input>
+							</div>
+							</div>
+							<div class="col-sm-6 form-group">
+								<form:label path="lastname">Last Name</form:label>
+								<form:input path="lastname"  placeholder="Enter Last Name Here.." class="form-control"></form:input>
+							</div>
+						</div>	
+						<div class="col-sm-8 form-group">
+						<form:label path="email">Email Address</form:label>
+						<div class="input-group">
+						<span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+						<form:input path="email" placeholder="Enter Email Address Here.." class="form-control"></form:input>
+					</div>
+					</div>	
+					<div class="col-sm-4 form-group">
+						<form:label path="phonenumber">Mobile Number</form:label>
+					    <div class="input-group">
+						<span class="input-group-addon"><i class="glyphicon glyphicon-phone" aria-hidden="true"></i></span>
+						<form:input path="phonenumber" placeholder="Enter Mobile Number Here.." class="form-control"></form:input>
+					</div>
+					</div>	
+					<div class="form-group">
+						<form:label path="phonenumber">User Name</form:label>
+					    <div class="input-group">
+						<span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+						<form:input path="phonenumber" placeholder="Enter User Name Here.." class="form-control"></form:input>
+					</div>
+					</div>
+					<div class="form-group">
+						<form:label path="phonenumber">Password</form:label>
+					    <div class="input-group">
+						<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+						<form:input path="phonenumber" type="password" placeholder="Enter Password Here.." class="form-control"></form:input>
+					</div>
+					</div>			
+						<div class="form-group">
+					    <form:label path="phonenumber">Billing Address</form:label>
+						<div class="input-group">
+						<span class="input-group-addon"><i class="glyphicon glyphicon-globe" aria-hidden="true"></i></span>
+						<form:textarea path="phonenumber" placeholder="Enter Billing Address Here.." rows="3" class="form-control"></form:textarea>
+						</div>
+						</div>	
+						<div class="row">
+							<div class="col-sm-4 form-group">
+								<form:label path="phonenumber">Apartment Number</form:label>
+								<form:input path="phonenumber" placeholder="Enter Apartment Number Here.." class="form-control"></form:input>
+							</div>	
+							<div class="col-sm-4 form-group">
+								<form:label path="phonenumber">Street Name</form:label>
+								<form:input path="phonenumber" placeholder="Enter Street Name Here.." class="form-control"></form:input>
+							</div>
+							<div class="col-sm-4 form-group">
+								<form:label path="phonenumber">City</form:label>
+								<form:input path="phonenumber" placeholder="Enter City Here.." class="form-control"></form:input>
+							</div>		
+						</div>
+						<div class="row">
+								<div class="col-sm-4 form-group">
+								<form:label path="phonenumber">State</form:label>
+								<form:input path="phonenumber" placeholder="Enter State Here.." class="form-control"></form:input>
+							</div>	
+							<div class="col-sm-4 form-group">
+								<form:label path="phonenumber">Country</form:label>
+								<form:input path="phonenumber" placeholder="Enter Country Here.." class="form-control"></form:input>
+							</div>
+							<div class="col-sm-4 form-group">
+								<form:label path="phonenumber">Zipcode</form:label>
+								<form:input path="phonenumber" placeholder="Enter Zipcode Here.." class="form-control"></form:input>
+							</div>
+						</div>						
+					<div class="form-group">
+					    <form:label path="phonenumber">Shipping Address</form:label>
+						<div class="input-group">
+						<span class="input-group-addon"><i class="glyphicon glyphicon-globe" aria-hidden="true"></i></span>
+						<form:textarea path="phonenumber" placeholder="Enter Shipping Address Here.." rows="3" class="form-control"></form:textarea>
+						</div>
+						</div>	
+						<div class="row">
+							<div class="col-sm-4 form-group">
+								<form:label path="phonenumber">Apartment Number</form:label>
+								<form:input path="phonenumber" placeholder="Enter Apartment Number Here.." class="form-control"></form:input>
+							</div>	
+							<div class="col-sm-4 form-group">
+								<form:label path="phonenumber">Street Name</form:label>
+								<form:input path="phonenumber" placeholder="Enter Street Name Here.." class="form-control"></form:input>
+							</div>
+							<div class="col-sm-4 form-group">
+								<form:label path="phonenumber">City</form:label>
+								<form:input path="phonenumber" placeholder="Enter City Here.." class="form-control"></form:input>
+							</div>		
+						</div>
+						<div class="row">
+								<div class="col-sm-4 form-group">
+								<form:label path="phonenumber">State</form:label>
+								<form:input path="phonenumber" placeholder="Enter State Here.." class="form-control"></form:input>
+							</div>	
+							<div class="col-sm-4 form-group">
+								<form:label path="phonenumber">Country</form:label>
+								<form:input path="phonenumber" placeholder="Enter Country Here.." class="form-control"></form:input>
+							</div>
+							<div class="col-sm-4 form-group">
+								<form:label path="phonenumber">Zipcode</form:label>
+								<form:input path="phonenumber" placeholder="Enter Zipcode Here.." class="form-control"></form:input>
+							</div>
+						</div>						
+						
+					
+					<button type="button" class="btn btn-lg btn-info">Submit</button>					
+					</div>
+				</form:form>
+				</div>
+	</div>
+	</div>	</body>
+</html>
+                    <%@ include file="footer.jsp" %>
+                    

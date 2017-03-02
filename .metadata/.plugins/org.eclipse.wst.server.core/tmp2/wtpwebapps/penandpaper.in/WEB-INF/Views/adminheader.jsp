@@ -55,23 +55,19 @@
        <li><a href="${url }"><span class="glyphicon glyphicon-plus-sign"></span>    Add New Product</a></li>
          <c:url var="allproducts" value="/all/product/getAllProducts"></c:url>
         <li><a href="${allproducts}"><span class="glyphicon glyphicon-folder-open"></span>    Products</a></li>
-         <li class="dropdown">
+      <li class="dropdown">
 			<a href="" class="dropdown-toggle" data-toggle="dropdown">
                      Select by Category<b class="caret"></b></a>
 			<ul class="dropdown-menu">
-			<c:url var="url1" value="/all/product/productsByCategory?searchCondition=New Arrivals"></c:url>
-			<li><a href="${url1}">New Arrivals</a></li>
-			<c:url var="url_2" value="/all/product/productsByCategory?searchCondition=Discount"></c:url>
-			<li><a href="${url_2}">Discount</a></li>
-			
-			<c:url var="url_3" value="/all/product/productsByCategory?searchCondition=Sale"></c:url>
-			<li><a href="${url_3}">Sale</a></li>
+			<c:forEach var="c" items="${categories }">
+			<li>
+<a href="<c:url value="/all/product/productsByCategory?searchCondition=${c.categoryDetails }"></c:url>" >
+  ${c.categoryDetails }</a></li>
+			</c:forEach>
 			</ul>
 			</li>
 </ul>
-        
-          </ul>
-    </div>
+      </div>
  </div>
 </nav>
 

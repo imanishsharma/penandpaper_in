@@ -29,8 +29,16 @@
         <property name="annotatedClasses"><!--  Entities -->
             <list>
                <value>com.penandpaper.model.Product</value>
-
                <value>com.penandpaper.model.Category </value>
+               <value>com.penandpaper.model.Authorities </value>
+               <value>com.penandpaper.model.BillingAddress</value>
+               <value>com.penandpaper.model.Customer </value>
+               <value>com.penandpaper.model.Users </value>
+               <value>com.penandpaper.model.Cart</value>
+               <value>com.penandpaper.model.ShippingAddress</value>
+            
+            
+            
             </list>
         </property>
         
