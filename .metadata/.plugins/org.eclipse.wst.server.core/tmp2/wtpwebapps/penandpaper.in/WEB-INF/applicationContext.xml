@@ -43,6 +43,36 @@
         </property>
         
     </bean>
+    <security:http auto-config="true">
+ <security:csrf disabled="true"/>
+ <security:intercept-url pattern="/index*/**" access="permitAll"/>
+ <security:intercept-url pattern="/home" access="permitAll"/>
+ <security:intercept-url pattern="/login" access="permitAll"/>
+ <security:intercept-url pattern="/all/**" access="hasAnyRole('ROLE_ADMIN','ROLE_USER')"/>
+ <security:intercept-url pattern="/admin/**" access="hasRole('ROLE_ADMIN')"/>
+
+
+ <security:form-login login-page="/login" 
+ authentication-failure-url="/login?error" 
+ login-processing-url="/j_spring_security_check" 
+ default-target-url="/home" 
+ username-parameter="j_username" 
+ password-parameter="j_password"/>
+ <security:logout logout-success-url="/login?logout" 
+ logout-url="/j_spring_security_logout"/>
+ </security:http>
+ <security:authentication-manager>
+ <security:authentication-provider>
+
+ <security:jdbc-user-service
+ data-source-ref="dataSource"
+ authorities-by-username-query="SELECT username, role FROM authorities WHERE username = ?"
+ users-by-username-query="SELECT username, password, enabled FROM users WHERE username = ?" />
+
+ </security:authentication-provider>
+ </security:authentication-manager>
+
+    
     <bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
         <property name="sessionFactory" ref="sessionFactory" />
     </bean>

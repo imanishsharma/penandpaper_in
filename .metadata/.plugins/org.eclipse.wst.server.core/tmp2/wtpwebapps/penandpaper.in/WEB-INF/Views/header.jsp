@@ -1,6 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
     <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+    <%@ taglib prefix="security"
+	uri="http://www.springframework.org/security/tags"%>
+   
     <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -137,11 +140,22 @@
    </li>
         <li><a href="aboutus"><span class="glyphicon glyphicon-user"></span>  About Us</a></li>
         <li><a href="contactus"><span class="glyphicon glyphicon-phone-alt"></span>  Contact Us</a></li>
+        <c:url var="url" value="/admin/product/productform"></c:url>
+        
+           
    </ul>
      
         <ul class="nav navbar-nav navbar-right">
-        <li><a href="<c:url value="/register"></c:url>"><span class="glyphicon glyphicon-pencil"></span>    Register</a></li>
+        <c:if test="${pageContext.request.userPrincipal.name !=null }">
+        <li><a href="">Welcome! ${pageContext.request.userPrincipal.name }</a></li>
+       </c:if>
+        <c:if test="${pageContext.request.userPrincipal.name ==null }">
+	    <li><a href="<c:url value="/register"></c:url>"><span class="glyphicon glyphicon-pencil"></span>    Register</a></li>
         <li><a href="login"><span class="glyphicon glyphicon-log-in"></span>    Login</a></li>
+        </c:if>
+        <c:if test="${pageContext.request.userPrincipal.name !=null }">
+			<li><a href="<c:url value="/j_spring_security_logout"></c:url>"><span class="glyphicon glyphicon-log-out"></span>   Logout</a></li>
+			</c:if>
         <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span>    Shopping Cart:0</a></li>
        </ul>
     </div>
