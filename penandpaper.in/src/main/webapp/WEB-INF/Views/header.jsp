@@ -71,7 +71,7 @@
     <div class="collapse navbar-collapse" id="myNavbar">
     <ul id ="navbar" class="nav navbar-nav">
     <li class="active"><a href="home"><span class="glyphicon glyphicon-home"></span>  Home</a></li>
-     <li><a href="<c:url value="/all/product/AllProducts"></c:url>"><span class="glyphicon glyphicon-home"></span>  All Products</a></li>
+     <li><a href="<c:url value="/all/product/AllProducts"></c:url>"><span class="glyphicon glyphicon-gift"></span>  All Products</a></li>
    
     <li class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-paperclip"></span>   Categories <span class="caret"></span></a>
@@ -86,8 +86,9 @@
 
      <li><a href="aboutus"><span class="glyphicon glyphicon-user"></span>  About Us</a></li>
         <li><a href="contactus"><span class="glyphicon glyphicon-phone-alt"></span>  Contact Us</a></li>
-        <c:url var="url" value="/admin/product/productform"></c:url>
-        
+      <security:authorize access="hasRole('ROLE_ADMIN')">
+        <li><a href="<c:url value="/admin/product/productform"></c:url>"><span class="glyphicon glyphicon-level-up	Try it"></span>    ADMIN ZONE</a></li>
+        </security:authorize>
            
    </ul>
      

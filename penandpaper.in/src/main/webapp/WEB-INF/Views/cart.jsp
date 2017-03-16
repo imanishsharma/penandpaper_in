@@ -45,9 +45,9 @@
                         <td class="col-sm-1 col-md-1 text-center"><strong>&#8377 {{cartItem.product.pPrice}}</strong></td>
                         <td class="col-sm-1 col-md-1 text-center"><strong>&#8377 {{cartItem.totalPrice}}</strong></td>
                         <td class="col-sm-1 col-md-1">
-                        <button ng-click="removeFromCart({{cartItem.cartItemId}})" type="button" class="btn btn-danger">
+                        <a href="" ng-click="removeFromCart(cartItem.id)" type="button" class="btn btn-danger">
                             <span class="glyphicon glyphicon-remove"></span> Remove
-                        </button></td>
+                        </a></td>
                     </tr>
                                        <tr>
                         <td>   </td>

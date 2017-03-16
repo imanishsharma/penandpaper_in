@@ -18,7 +18,9 @@ app.controller("ProductController",function($scope,$http){
 	$scope.removeFromCart=function(cartItemId){
 	console.log('cartitem to be removed is ' + cartItemId);
 	$http.put('http://localhost:8080/penandpaper.in/cart/removeCartItem/'+cartItemId).success(function(){
-	$scope.getCart($scope.cartId)
+		console.log('after url  ' + cartItemId);
+		
+		$scope.getCart($scope.cartId)
 	})
 	}
 

@@ -15,17 +15,14 @@ private CartItemDao cartItemDao;
 	  cartItemDao.addCartItem(cartItem);
 		
 	}
-	public CartItem getCartItem(int cartItemId) {
-		// TODO Auto-generated method stub
-		return null;
-	}
 	public void removeCartItem(CartItem cartItem) {
-		// TODO Auto-generated method stub
-		
-	}
+		cartItemDao.removeCartItem(cartItem);
+
+}
 	public void removeAllCartItems(Cart cart) {
-		// TODO Auto-generated method stub
-		
+		cartItemDao.removeAllCartItems(cart);
+}
+	public CartItem getCartItem(int cartItemId) {
+		return cartItemDao.getCartItem(cartItemId);
 	}
-	
 }

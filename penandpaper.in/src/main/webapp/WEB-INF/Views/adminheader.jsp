@@ -20,7 +20,7 @@
     <script src="https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>
 
     <link href="https://cdn.datatables.net/1.10.10/css/jquery.dataTables.min.css" rel="stylesheet">
-      
+      </head>
   
  <div id="header" class="jumbotron">
   <div class="container-fluid">
@@ -28,11 +28,14 @@
   <div class ="col-sm-2">
   <a   class="img-responsive2" class="navbar-brand" href="home"><img id ="brand" src="Resources/images/logo.png"><img/></a>
   </div>
-  <div class="col-sm-10">
+   <div class="col-sm-10">
+  <a   class="img-responsive"  class="navbar-brand" href="#"><img id="banner" src="Resources/images/adminbanner.png"><img/></a>
+  </div>
   </div>
   </div>
   </div>	
-  </div>
+  
+  
  
  
  <!-- Header and navbar -->
@@ -65,8 +68,22 @@
   ${c.categoryDetails }</a></li>
 			</c:forEach>
 			</ul>
+			
 			</li>
 </ul>
+  <ul class="nav navbar-nav navbar-right">
+        <c:if test="${pageContext.request.userPrincipal.name !=null }">
+        <li><a href="">Welcome! ${pageContext.request.userPrincipal.name }</a></li>
+       </c:if>
+        <c:if test="${pageContext.request.userPrincipal.name ==null }">
+	    <li><a href="<c:url value="/register"></c:url>"><span class="glyphicon glyphicon-pencil"></span>    Register</a></li>
+        <li><a href="login"><span class="glyphicon glyphicon-log-in"></span>    Login</a></li>
+        </c:if>
+        <c:if test="${pageContext.request.userPrincipal.name !=null }">
+			<li><a href="<c:url value="/j_spring_security_logout"></c:url>"><span class="glyphicon glyphicon-log-out"></span>   Logout</a></li>
+			</c:if>
+			 </ul>
+
       </div>
  </div>
 </nav>
