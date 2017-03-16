@@ -1,9 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
     <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-    <%@ taglib prefix="security"
-	uri="http://www.springframework.org/security/tags"%>
-   
+    <%@ taglib prefix="security" uri="http://www.springframework.org/security/tags"%>
+    <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
+    <%@ page isELIgnored="false" %>
+    
     <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -14,10 +15,22 @@
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="Resources/bootstrap/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js"></script>
+     
   <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
          rel = "stylesheet">
       <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
       <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+       <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+         rel = "stylesheet">
+      <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+        <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>
+    
+
+    <link href="https://cdn.datatables.net/1.10.10/css/jquery.dataTables.min.css" rel="stylesheet">
+      
      <script>
    $(document).ready(function(){
    $('.dropdown-submenu a.test').on("click", function(e){
@@ -58,87 +71,20 @@
     <div class="collapse navbar-collapse" id="myNavbar">
     <ul id ="navbar" class="nav navbar-nav">
     <li class="active"><a href="home"><span class="glyphicon glyphicon-home"></span>  Home</a></li>
+     <li><a href="<c:url value="/all/product/AllProducts"></c:url>"><span class="glyphicon glyphicon-home"></span>  All Products</a></li>
+   
     <li class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-paperclip"></span>   Categories <span class="caret"></span></a>
     <ul class="dropdown-menu">
-    <li class="dropdown-submenu">
-          <a class="test" tabindex="-1" href="#">Art & Craft Supplies <span class="caret"></span></a>
-          <ul  class="dropdown-menu">
-          <li><a tabindex="-1" href="#">Art Pencils</a></li>
-          <li><a tabindex="-1" href="#">Canvas</a></li>
-          <li><a tabindex="-1" href="#">Crayons</a></li>
-          <li><a tabindex="-1" href="#">Paints</a></li>
-          <li><a tabindex="-1" href="#">Sketch Colours</a></li>
-         </ul>
-      <a class="test" tabindex="-1" href="#">Desk Accessories<span class="caret"></span></a>
-        <ul  class="dropdown-menu">
-          <li><a tabindex="-1" href="#">Adhesives & Glues</a></li>
-          <li><a tabindex="-1" href="#">Calculators</a></li>
-          <li><a tabindex="-1" href="#">Paper Clips</a></li>
-          <li><a tabindex="-1" href="#">Scissors</a></li>
-          <li><a tabindex="-1" href="#">Staplers & Removers</a></li>
-          <li><a tabindex="-1" href="#">Sticky Notes</a></li>
-          <li><a tabindex="-1" href="#">Tapes</a></li>
-        </ul>
-           <a class="test" tabindex="-1" href="#">Files & Folders<span class="caret"></span></a>
-           <ul  class="dropdown-menu">
-           <li><a tabindex="-1" href="#">Cheque Book Holders</a></li>
-           <li><a tabindex="-1" href="#">Files</a></li>
-           <li><a tabindex="-1" href="#">Folders</a></li>
-         </ul>
-           <a class="test" tabindex="-1" href="#">NoteBooks & Diaries<span class="caret"></span></a>
-          <ul  class="dropdown-menu">
-          <li><a tabindex="-1" href="#">Accounting Books</a></li>
-          <li><a tabindex="-1" href="#">Diaries</a></li>
-          <li><a tabindex="-1" href="#">Graph Books</a></li>
-          <li><a tabindex="-1" href="#">NoteBooks & Notepads</a></li>
-         </ul>
-          <a class="test" tabindex="-1" href="#">Office Supplies<span class="caret"></span></a>
-          <ul  class="dropdown-menu">
-          <li><a tabindex="-1" href="#">Board Accessories</a></li>
-          <li><a tabindex="-1" href="#">Corporate Gifting</a></li>
-          <li><a tabindex="-1" href="#">File Rack</a></li>
-          <li><a tabindex="-1" href="#">Calculators</a></li>
-          <li><a tabindex="-1" href="#">Pen Stand</a></li>
-          <li><a tabindex="-1" href="#">Diaries</a></li>
-          <li><a tabindex="-1" href="#">File & Folders</a></li>
-         </ul>
-        <a class="test" tabindex="-1" href="#">Paper Products<span class="caret"></span></a>
-        <ul  class="dropdown-menu">
-          <li><a tabindex="-1" href="#">Bond Papers</a></li>
-          <li><a tabindex="-1" href="#">Carbon Papers</a></li>
-          <li><a tabindex="-1" href="#">Drawing Sheets</a></li>
-          <li><a tabindex="-1" href="#">Envelops</a></li>
-          <li><a tabindex="-1" href="#">Gift Wrapping Papers</a></li>
-          <li><a tabindex="-1" href="#">Printing Papers</a></li>
-          <li><a tabindex="-1" href="#">Ruled Sheets</a></li>
-           </ul>
-           <a class="test" tabindex="-1" href="#">Party Essentials<span class="caret"></span></a>
-        <ul  class="dropdown-menu">
-          <li><a tabindex="-1" href="#">Balloons</a></li>
-          <li><a tabindex="-1" href="#">Invitation Cards</a></li>
-          </ul>
-        <a class="test" tabindex="-1" href="#">School Supplies <span class="caret"></span></a>
-        <ul  class="dropdown-menu">
-          <li><a tabindex="-1" href="#">Drawing Instruments</a></li>
-          <li><a tabindex="-1" href="#">Erasers</a></li>
-          <li><a tabindex="-1" href="#">Exam Boards</a></li>
-          <li><a tabindex="-1" href="#">Geometry Box</a></li>
-          <li><a tabindex="-1" href="#">Highlighters</a></li>
-          <li><a tabindex="-1" href="#">Pencil Boxes</a></li>
-          <li><a tabindex="-1" href="#">Sharpners</a></li>
-          <li><a tabindex="-1" href="#">Stickers</a></li>
-         </ul>
-          <a class="test" tabindex="-1" href="#">Writing Instruments <span class="caret"></span></a>
-        <ul  class="dropdown-menu">
-         <li><a tabindex="-1" href="#">Chalks</a></li>
-          <li><a tabindex="-1" href="#">Markers</a></li>
-          <li><a tabindex="-1" href="#">Pencils</a></li>
-          <li><a tabindex="-1" href="#">Pens</a></li>
-       </ul>
-     </ul>
-   </li>
-        <li><a href="aboutus"><span class="glyphicon glyphicon-user"></span>  About Us</a></li>
+    <c:forEach var="c" items="${categories }">
+			<li>
+<a href="<c:url value="/all/product/productsByCategories?searchCondition=${c.categoryDetails }"></c:url>" >
+  ${c.categoryDetails }</a></li>
+			</c:forEach>
+			</ul>
+			</li>
+
+     <li><a href="aboutus"><span class="glyphicon glyphicon-user"></span>  About Us</a></li>
         <li><a href="contactus"><span class="glyphicon glyphicon-phone-alt"></span>  Contact Us</a></li>
         <c:url var="url" value="/admin/product/productform"></c:url>
         
@@ -156,7 +102,9 @@
         <c:if test="${pageContext.request.userPrincipal.name !=null }">
 			<li><a href="<c:url value="/j_spring_security_logout"></c:url>"><span class="glyphicon glyphicon-log-out"></span>   Logout</a></li>
 			</c:if>
-        <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span>    Shopping Cart:0</a></li>
+			<security:authorize access="hasRole('ROLE_USER')">
+        <li><a href="<c:url value="/cart/getCartId"></c:url>"><span class="glyphicon glyphicon-shopping-cart"></span>    Shopping Cart:0</a></li>
+        </security:authorize>
        </ul>
     </div>
  </div>

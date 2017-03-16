@@ -13,5 +13,8 @@ private CustomerDao customerDao;
 	public void saveCustomer(Customer customer) {
 		customerDao.saveCustomer(customer);
 	}
+	public Customer getCustomerByUsername(String username){
+		return customerDao.getCustomerByUsername(username);
+	}
 
 }

@@ -1,5 +1,6 @@
 package com.penandpaper.dao;
 
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,6 +9,7 @@ import org.springframework.stereotype.Repository;
 import com.penandpaper.model.Authorities;
 import com.penandpaper.model.Cart;
 import com.penandpaper.model.Customer;
+import com.penandpaper.model.Users;
 
 @Repository
 public class CustomerDaoImpl implements CustomerDao{
@@ -38,5 +40,17 @@ private SessionFactory sessionFactory;
 		session.flush();
 		session.close();		
 	}
+	public Customer getCustomerByUsername(String username) {
+		Session session=sessionFactory.openSession();
+		Query query=session.createQuery("from Users where username=?");
+		query.setString(0, username);
+		Users users=(Users)query.uniqueResult();
+		//com.niit.model.Users 
+		Customer customer=users.getCustomer();
+		session.close();
+		return customer;
+		
+	}
+
 
 }

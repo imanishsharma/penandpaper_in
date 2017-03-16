@@ -1,13 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
-	<item value="118" key="org.eclipse.jdt.debug.ui.jre_preference_page_context.columnWidth0"/>
-	<item value="C:\Users\Manish\.m2\repository\commons-logging\commons-logging\1.2" key="JavaClasspathTab.LAST_PATH_SETTING"/>
-<<<<<<< HEAD
-	<item value="191" key="org.eclipse.jdt.debug.ui.jre_preference_page_context.columnWidth1"/>
-	<item value="1" key="org.eclipse.jdt.debug.ui.jre_preference_page_context.sortColumn"/>
-=======
-	<item value="1" key="org.eclipse.jdt.debug.ui.jre_preference_page_context.sortColumn"/>
-	<item value="191" key="org.eclipse.jdt.debug.ui.jre_preference_page_context.columnWidth1"/>
->>>>>>> product datatable added
-	<item value="82" key="org.eclipse.jdt.debug.ui.jre_preference_page_context.columnWidth2"/>
+	<item value="E:\apache-tomcat-8.0.33-windows-x64\apache-tomcat-8.0.33\bin" key="JavaClasspathTab.LAST_PATH_SETTING"/>
 </section>

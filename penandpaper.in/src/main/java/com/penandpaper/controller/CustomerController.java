@@ -22,7 +22,7 @@ public String getRegistrationForm(Model model){
 	model.addAttribute("customer",new Customer());
 	return "register";
 }
-@RequestMapping("/all/registerCustomer")
+@RequestMapping("/registerCustomer")
 public String registerCustomer(@Valid @ModelAttribute(value="customer") Customer customer
 		,BindingResult result,Model model){
 	if(result.hasErrors())

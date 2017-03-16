@@ -13,7 +13,7 @@
         <property name="driverClassName" value="org.h2.Driver" ></property>
         <property name="url" value="jdbc:h2:~/test"></property>       
        <property name="username" value="manish"></property>
-        <property name="password" value="niit" ></property>
+        <property name="password" value="manish" ></property>
     </bean>
 
     <bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean" >
@@ -35,6 +35,8 @@
                <value>com.penandpaper.model.Customer </value>
                <value>com.penandpaper.model.Users </value>
                <value>com.penandpaper.model.Cart</value>
+                <value>com.penandpaper.model.CartItem</value>
+              
                <value>com.penandpaper.model.ShippingAddress</value>
             
             
@@ -50,8 +52,8 @@
  <security:intercept-url pattern="/login" access="permitAll"/>
  <security:intercept-url pattern="/all/**" access="hasAnyRole('ROLE_ADMIN','ROLE_USER')"/>
  <security:intercept-url pattern="/admin/**" access="hasRole('ROLE_ADMIN')"/>
-
-
+ <security:intercept-url pattern="/cart/**" access="hasRole('ROLE_USER')"/>
+ 
  <security:form-login login-page="/login" 
  authentication-failure-url="/login?error" 
  login-processing-url="/j_spring_security_check" 

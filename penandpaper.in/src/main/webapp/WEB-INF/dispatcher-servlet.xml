@@ -13,6 +13,10 @@
 <mvc:resources  mapping="Resources/**" location="/Resources/"/>
 <mvc:resources  mapping="all/registrationForm/Resources/**" location="/Resources/"/>	
 <mvc:resources  mapping="all/Resources/**" location="/Resources/"/>	
+<mvc:resources  mapping="all/product/productdetails/Resources/**" location="/Resources/"/>	
+<mvc:resources  mapping="admin/product/viewproduct/Resources/**" location="/Resources/"/>	
+<mvc:resources  mapping="cart/Resources/**" location="/Resources/"/>	
+
 <mvc:resources  mapping="admin/product/Resources/**" location="/Resources/"/>	
 
 <mvc:resources  mapping="all/product/Resources/**" location="/Resources/"/>	

@@ -31,6 +31,12 @@ public void setId(int id) {
 public String getUsername() {
 	return username;
 }
+public Customer getCustomer() {
+	return customer;
+}
+public void setCustomer(Customer customer) {
+	this.customer = customer;
+}
 public void setUsername(String username) {
 	this.username = username;
 }

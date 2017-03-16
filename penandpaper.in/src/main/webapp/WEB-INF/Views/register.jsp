@@ -16,7 +16,7 @@
 	            </div> 
 				
 	<div class="row">
-				<c:url var="url" value="/all/registerCustomer"></c:url>
+				<c:url var="url" value="/registerCustomer"></c:url>
                 <form:form action="${url }" commandName="customer">
 				
 					<div class="col-sm-12">

@@ -1,7 +1,0 @@
-package com.penandpaper.service;
-
-public interface CustomerService {
-	void saveCustomer(Customer customer);
-
-
-}

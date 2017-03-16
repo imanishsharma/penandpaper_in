@@ -1,0 +1,43 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<%@ include file="header.jsp"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body style="background-color:#EEEEEE;">
+      
+	<div style="margin-top:10px;margin-bottom:10px;color:blue;"class="container">
+	<h1> <i class="fa fa-shopping-cart"></i> Products </h1>
+   
+
+		<table  class="table table-bordered table-hover table-striped">
+			<thead>
+				<tr style="color:#26254F;">
+					<th>Image</th>
+					<th>Product Name</th>
+					<th>Description</th>
+					<th>Category</th>
+					<th>Sub Category</th>
+					 </tr>
+			</thead>
+				<tr>
+				<td>
+				<c:url var="src" value="Resources/images/${p.pId }.png"></c:url>
+				<img style="height:100px;width:100px;" src="${src } "/>
+				</td>
+					<td>${product.pName }</td>
+					<td>${product.pDescription }</td>
+					<td>${product.category.categoryDetails}</td>
+					<td>${product.subCategory}</td>
+					
+				</tr>
+		</table>
+
+	</div>
+	<%@ include file="footer.jsp"%>
+	
+</body>
+</html>

@@ -54,7 +54,7 @@ public String saveProduct(@Valid @ModelAttribute(value="product") Product produc
 	MultipartFile prodImage=product.getImage();
 	if(!prodImage.isEmpty()){
 		Path paths=
-Paths.get("D:\\penandpaper_in\\penandpaper.in\\src\\main\\webapp\\Resources\\images\\"+ product.getpId()+".png");
+Paths.get("E:\\penandpaper_in\\penandpaper.in\\src\\main\\webapp\\Resources\\images\\"+ product.getpId()+".png");
 	try {
 		prodImage.transferTo(new File(paths.toString()));
 	} catch (IllegalStateException e) {
@@ -65,12 +65,12 @@ Paths.get("D:\\penandpaper_in\\penandpaper.in\\src\\main\\webapp\\Resources\\ima
 		e.printStackTrace();
 	}
 	}
-return "redirect:/all/product/getAllProducts";
+return "redirect:/admin/product/getAllProducts";
 }
 
 	
 
-@RequestMapping("/all/product/getAllProducts")
+@RequestMapping("/admin/product/getAllProducts")
 public String getAllProducts(Model model){
 	List<Product> products=productService.getAllProducts();
 	//Assigning list of products to model attribute products
@@ -78,7 +78,7 @@ public String getAllProducts(Model model){
 	model.addAttribute("categories",categoryService.getCategories());
 	return "productlist";
 }
-@RequestMapping("/all/product/viewproduct/{id}")
+@RequestMapping("/admin/product/viewproduct/{id}")
 public String viewProduct(@PathVariable int id,Model model){
 	Product product=productService.getProductById(id);
 	model.addAttribute("product",product);
@@ -89,7 +89,7 @@ public String viewProduct(@PathVariable int id,Model model){
 @RequestMapping("/admin/product/deleteproduct/{pId}")
 public String deleteProduct(@PathVariable int pId){
 	productService.deleteProduct(pId);
-	return "redirect:/all/product/getAllProducts";
+	return "redirect:/admin/product/getAllProducts";
 }
 
 
@@ -109,10 +109,10 @@ public String editProductDetails(@Valid @ModelAttribute("product") Product produ
 	if(result.hasErrors())
 		return "productform";
 	productService.updateProduct(product);
-	return "redirect:/all/product/getAllProducts";
+	return "redirect:/admin/product/getAllProducts";
 }
 
-@RequestMapping("/all/product/productsByCategory")
+@RequestMapping("/admin/product/productsByCategory")
 public String getProductsByCategory(@RequestParam(name="searchCondition") String searchCondition,
 		Model model){
 	List<Product> products=productService.getAllProducts();
@@ -120,5 +120,6 @@ public String getProductsByCategory(@RequestParam(name="searchCondition") String
 	model.addAttribute("searchCondition",searchCondition);
 	return "productlist";
 }
+
 }
 

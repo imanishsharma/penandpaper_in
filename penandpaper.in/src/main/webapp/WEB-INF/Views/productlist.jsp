@@ -19,12 +19,15 @@ $(document).ready(function(){
 </script>
 </head>
 <body style="background-color:#EEEEEE;">
+      
 	<div style="margin-top:10px;margin-bottom:10px;color:blue;"class="container">
+	<h1> <i class="fa fa-shopping-cart"></i> Products </h1>
+   
 
 		<table  class="table table-bordered table-hover table-striped">
 			<thead>
 				<tr style="color:#26254F;">
-					<th>Image</th>
+					<th>Product Image</th>
 					<th>Product Name</th>
 					<th>Description</th>
 					<th>Category</th>
@@ -43,7 +46,7 @@ $(document).ready(function(){
 					<td>${p.category.categoryDetails}</td>
 					<td>${p.subCategory}</td>
 					<td>
-					<c:url var="url" value="/all/product/viewproduct/${p.pId }"></c:url>
+					<c:url var="url" value="/admin/product/viewproduct/${p.pId }"></c:url>
 					<a href="${url }"><span class="glyphicon glyphicon-info-sign"></span></a> 
 					<c:url var="delete" value="/admin/product/deleteproduct/${p.pId }"></c:url>
 					<a href="${delete }"><span class="glyphicon glyphicon-remove"></span></a>

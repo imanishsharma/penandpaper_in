@@ -69,7 +69,11 @@ $('input[name=pMfg]').datepicker({
 <form:radiobutton path="category.id" value="${c.id}"/>${c.categoryDetails }
 </c:forEach>
 </div>
-
+<div class="form-group">
+<label for="subCategory">Sub Category</label>
+<form:input path="subCategory" class="form-control"/>
+<form:errors path="subCategory" cssStyle="color:#ff0000"></form:errors>
+</div>
 
 <input type="submit" value="Edit Product" class="btn btn-default">
 </form:form>

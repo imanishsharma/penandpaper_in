@@ -1,10 +1,20 @@
 package com.penandpaper.model;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+
+
 
 @Entity
 public class Cart {
@@ -13,7 +23,10 @@ public class Cart {
 private int id;
 private double grandTotal;
 @OneToOne
+@JsonIgnore
 private Customer customer;
+@OneToMany(mappedBy="cart",cascade=CascadeType.ALL,fetch=FetchType.EAGER)
+private List<CartItem> cartItems;
 public int getId() {
 	return id;
 }
@@ -32,5 +45,10 @@ public Customer getCustomer() {
 public void setCustomer(Customer customer) {
 	this.customer = customer;
 }
+public List<CartItem> getCartItems() {
+	return cartItems;
 }
-
+public void setCartItems(List<CartItem> cartItems) {
+	this.cartItems = cartItems;
+}
+}
