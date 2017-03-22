@@ -79,9 +79,7 @@
                             <span class="glyphicon glyphicon-shopping-cart"></span> Continue Shopping
                         </button></td>
                         <td>
-                        <button type="button" class="btn btn-success">
-                            Checkout <span class="glyphicon glyphicon-play"></span>
-                        </button></td>
+                        <a href="<c:url value="/order/${cartId}"></c:url>" class="btn btn-success pull-right"> Check Out </a></td>
                     </tr>
                 </tbody>
             </table>

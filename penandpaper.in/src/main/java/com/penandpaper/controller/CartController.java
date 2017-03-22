@@ -35,5 +35,8 @@ public String getCartId(Model model){
 	public @ResponseBody Cart getCart(@PathVariable int cartId){
 	Cart cart=cartService.getCart(cartId);
 	return cart;
-	} 
+	
+	}
+	
+	
 }
