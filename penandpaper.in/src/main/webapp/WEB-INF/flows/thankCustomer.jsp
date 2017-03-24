@@ -1,6 +1,6 @@
 
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
-<%@ include file="header.jsp" %>
+<%@ include file="/WEB-INF/Views/header.jsp" %>
 <%@ page isELIgnored="false" %>
 <div class="container-wrapper">
     <div class="container">
@@ -18,4 +18,4 @@
             <p><a href="<spring:url value="/" />" class="btn btn-default">OK</a></p>
         </section>
 
-<%@ include file="footer.jsp" %>
+<%@ include file="/WEB-INF/Views/footer.jsp" %>

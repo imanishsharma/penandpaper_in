@@ -38,5 +38,13 @@ private SessionFactory sessionFactory;
 	session.flush();
 	session.close();
 	}
+	public void addCustomerOrder(CustomerOrder customerOrder) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	
+	
+	}
 
-}
+

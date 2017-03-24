@@ -4,16 +4,16 @@
       xsi:schemaLocation="http://www.springframework.org/schema/webflow http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd">
  <var name="order" class="com.penandpaper.model.CustomerOrder"/>
  <action-state id="validateState">
- <evaluate expression="cartDaoImpl.validate(requestParameters.cartId)" result="order.cart"></evaluate>
+ <evaluate expression="CartDaoImpl.validate(requestParameters.cartId)" result="order.cart"></evaluate>
  <transition to="invalidCartWarning" on="java.io.IOException" ></transition>
  <transition to="collectCustomerInfo"></transition>
  </action-state>
  
- <view-state id="collectCustomerInfo" model="order">
+ <view-state id="collectCustomerInfo" view="collectCustomerInfo.jsp" model="order">
  <transition on="customerInfoCollected" to="collectShippingDetail"></transition>
  </view-state>
  
- <view-state id="collectShippingDetail" model="order">
+ <view-state id="collectShippingDetail" view="collectShippingDetail.jsp" model="order">
  <transition on="shippingDetailCollected" to="orderConfirmation"></transition>
  <transition on="backToCollectCustomerInfo" to="collectCustomerInfo"></transition>
  </view-state>
@@ -32,7 +32,7 @@
  <evaluate expression="cartItemDaoImpl.removeAllCartItems(order.cart)"></evaluate>
  <transition to="thankCustomer"></transition>
  </action-state>
- <view-state id="thankCustomer">
+ <view-state id="thankCustomer" model="order">
  <transition to="endState"></transition>
  </view-state>
  
