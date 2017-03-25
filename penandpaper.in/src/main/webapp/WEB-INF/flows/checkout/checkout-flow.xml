@@ -4,8 +4,8 @@
       xsi:schemaLocation="http://www.springframework.org/schema/webflow http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd">
  <var name="order" class="com.penandpaper.model.CustomerOrder"/>
  <action-state id="validateState">
- <evaluate expression="CartDaoImpl.validate(requestParameters.cartId)" result="order.cart"></evaluate>
- <transition to="invalidCartWarning" on="java.io.IOException" ></transition>
+ <evaluate expression="cartDaoImpl.validate(requestParameters.cartId)" result="order.cart"></evaluate>
+ <transition to="invalidCartWarning" on-exception	="java.io.IOException" ></transition>
  <transition to="collectCustomerInfo"></transition>
  </action-state>
  

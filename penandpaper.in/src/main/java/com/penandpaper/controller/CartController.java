@@ -49,7 +49,7 @@ public String getCartId(Model model){
 	return cart;
 	
 	}
-	@RequestMapping("/order/{cartId}")
+	/*@RequestMapping("/order/{cartId}")
 	public String Order(@PathVariable("cartId") int cartId) {
 		CustomerOrder customerOrder = new CustomerOrder();
 		Cart cart = cartDao.getCart(cartId);
@@ -58,6 +58,6 @@ public String getCartId(Model model){
 		customerOrder.setCustomer(customer);
 	    customerOrderDao.addCustomerOrder(customerOrder);
 		return "redirect:/checkout?customerOrderId=" + customerOrder.getOrderId();
-	}
+	}*/
 	
 }

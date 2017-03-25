@@ -1,5 +1,6 @@
 package com.penandpaper.model;
 
+import java.io.Serializable;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -17,7 +18,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 
 @Entity
-public class Cart {
+public class Cart implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 private int id;

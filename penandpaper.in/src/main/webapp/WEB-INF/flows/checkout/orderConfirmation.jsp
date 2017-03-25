@@ -66,9 +66,9 @@
                                 <c:set var="grandTotal" value="0.0"></c:set>
                                 <c:forEach var="cartItem" items="${order.cart.cartItems}">
                                     <tr>
-                                        <td class="col-md-9"><em>${cartItem.product.name}</em></td>
+                                        <td class="col-md-9"><em>${cartItem.product.pName}</em></td>
                                         <td class="col-md-1" style="text-align: center">${cartItem.quantity}</td>
-                                        <td class="col-md-1" style="text-align: center">${cartItem.product.price}</td>
+                                        <td class="col-md-1" style="text-align: center">${cartItem.product.pPrice}</td>
                                         <td class="col-md-1" style="text-align: center">${cartItem.totalPrice}</td>
                                         <c:set var="grandTotal" value="${grandTotal + cartItem.totalPrice }"></c:set>
                                     </tr>
