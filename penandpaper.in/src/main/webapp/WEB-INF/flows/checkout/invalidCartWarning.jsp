@@ -6,13 +6,18 @@
         <section>
             <div class="jumbotron">
                 <div class="container">
-                    <h1>Invalid Cart!</h1>
+                 <h2>   <img style="height:100px;width:100px;" src="Resources/images/empty.png"><img/>
+                 Oops! Your Cart is Empty...
+                  <a  href="<c:url value="/all/product/AllProducts"></c:url>" class="btn btn-default">
+                  
+                            <span class="glyphicon glyphicon-shopping-cart"></span> Shop With Us
+                        </a>
+                 </h2>
                 </div>
             </div>
         </section>
+</div>
+</div>
+       
 
-        <section class="container">
-            <p><a href="<spring:url value="/product/productList" />" class="btn btn-default">Products</a></p>
-        </section>
-
-<%@ include file="/WEB-INF/Views/footer.jsp"" %>
+<%@ include file="/WEB-INF/Views/footer.jsp" %>

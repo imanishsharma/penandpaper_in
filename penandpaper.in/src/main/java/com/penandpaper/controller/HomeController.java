@@ -82,5 +82,35 @@ private ProductService productService;
 		model.addAttribute("searchCondition",searchCondition);
 		return "products";
 	}
-	
+	@RequestMapping("/all/product/home")
+	public String pHome() 
+	{
+		return "redirect:/home";
+
+	}
+	@RequestMapping("/all/product/aboutus")
+	public String pAbout() 
+	{
+		return "redirect:/aboutus";
+
+	}
+	@RequestMapping("/all/product/contactus")
+	public String pContact() 
+	{
+		return "redirect:/contactus";
+
+	}
+	@RequestMapping("/all/product/login")
+	public String pLogin() 
+	{
+		return "redirect:/login";
+
+	}
+	@RequestMapping("/admin/product/home")
+	public String aHome() 
+	{
+		return "redirect:/home";
+
+	}
 }
+
