@@ -104,7 +104,7 @@
 			<li><a href="<c:url value="/j_spring_security_logout"></c:url>"><span class="glyphicon glyphicon-log-out"></span>   Logout</a></li>
 			</c:if>
 			<security:authorize access="hasRole('ROLE_USER')">
-        <li><a href="<c:url value="/cart/getCartId"></c:url>"><span class="glyphicon glyphicon-shopping-cart"></span>    Shopping Cart:0</a></li>
+        <li><a href="<c:url value="/cart/getCartId"></c:url>"><span class="glyphicon glyphicon-shopping-cart"></span>    Shopping Cart: ${count} </a></li>
         </security:authorize>
        </ul>
     </div>

@@ -1,6 +1,10 @@
 package com.penandpaper.controller;
 
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
+
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -33,18 +37,18 @@ public class CartItemController {
 
 @RequestMapping("/cart/addCartItem/{pId}")
 @ResponseStatus(value=HttpStatus.NO_CONTENT)
-public void addCartItem(@PathVariable(value="pId") int productId){
+public void addCartItem(@PathVariable(value="pId") int productId,HttpSession session){
 	User user=
 	(User)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-
 	String username=user.getUsername();
 	Customer customer=customerService.getCustomerByUsername(username);//from Users where username=?
 	Cart cart=customer.getCart();
 	List<CartItem> cartItems= cart.getCartItems();
+	int size=cartItems.size();
+	 session.setAttribute("count", size+1);
 
 	Product product = productService.getProductById(productId);
-
-	for (int i = 0; i <cartItems.size(); i++) {
+    for (int i =0 ; i <cartItems.size(); i++) {
 	CartItem cartItem=cartItems.get(i);
 	Product p=cartItem.getProduct();
 	//1 == 1
@@ -52,9 +56,17 @@ public void addCartItem(@PathVariable(value="pId") int productId){
 	cartItem.setQuantity(cartItem.getQuantity() + 1);//increment the quantity
 	cartItem.setTotalPrice(cartItem.getQuantity() * p.getpPrice()); //update the total price
 	cartItemService.addCartItem(cartItem);//update the quantity in the cartitem
+	size=cartItems.size();
+	session.setAttribute("count", size);
+
+	
+	
 	return;
 	} 
-	}
+	 
+	   
+	
+	 	}
 
 	CartItem cartItem=new CartItem();
 	cartItem.setQuantity(1);
@@ -66,11 +78,21 @@ public void addCartItem(@PathVariable(value="pId") int productId){
 
 @RequestMapping("/cart/removeCartItem/{cartItemId}")
 @ResponseStatus(value=HttpStatus.NO_CONTENT)
-public void removeCartItem(@PathVariable int cartItemId){
+public void removeCartItem(@PathVariable int cartItemId,HttpSession session){
 	System.out.println("inside remove cart method");
 	CartItem cartItem=cartItemService.getCartItem(cartItemId);
 	cartItemService.removeCartItem(cartItem);
 	System.out.println("inside remove cart method");
+	User user=
+			(User)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+			String username=user.getUsername();
+			Customer customer=customerService.getCustomerByUsername(username);//from Users where username=?
+			Cart cart=customer.getCart();
+			List<CartItem> cartItems= cart.getCartItems();
+			int size=cartItems.size();
+			 session.setAttribute("count", size);
+	
+	
 	
 }
 @RequestMapping("/cart/removeAllCartItems/{cartId}")

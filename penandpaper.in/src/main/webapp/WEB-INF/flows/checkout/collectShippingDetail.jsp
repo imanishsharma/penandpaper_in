@@ -62,7 +62,7 @@
         <input type="hidden" name="_flowExecutionKey" />
          <button class="btn btn-primary nextBtn btn-lg pull-right" type="submit"  name="_eventId_shippingDetailCollected"	 >Next <span class="glyphicon glyphicon-chevron-right"></span></button>
           
-               <button class="btn btn-primary nextBtn btn-lg pull-right" type="submit"  name="_eventId_customerInfoCollected" ><span class="glyphicon glyphicon-chevron-left"></span> Back </button>
+               <button class="btn btn-primary nextBtn btn-lg pull-right" type="submit"  name="_eventId_backToCollectCustomerInfo" ><span class="glyphicon glyphicon-chevron-left"></span> Back </button>
    
  </fieldset>
   

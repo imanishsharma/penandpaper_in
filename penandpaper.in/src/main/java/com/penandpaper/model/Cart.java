@@ -27,7 +27,7 @@ private double grandTotal;
 @JsonIgnore
 private Customer customer;
 @OneToMany(mappedBy="cart",cascade=CascadeType.ALL,fetch=FetchType.EAGER)
-private List<CartItem> cartItems;
+public List<CartItem> cartItems;
 public int getId() {
 	return id;
 }
